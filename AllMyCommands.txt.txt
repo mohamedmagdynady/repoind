@@ -112,3 +112,12 @@ lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
 $ git branch
 * ReadMe
   master
+
+
+$ git checkout master
+
+$ git add AllMyCommands.txt.txt
+
+$ git commit -m"allmycommandsadded"
+
+$ git push --set-upstream mohamedmagdynady master
