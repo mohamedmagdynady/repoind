@@ -1,0 +1,114 @@
+git init
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add 1.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add f1.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add f3.txt
+
+ git add AllMyCommands.txt.txt
+
+git remote add repoind https://github.com/mohamedmagdynady/repoind
+
+git push --set-upstream mohamedmagdynady master
+
+git commit -m"files pushed"
+
+ git rm f3.txt
+rm 'f3.txt'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"delete file"
+
+git add README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"read me added"
+[master a13c1eb] read me added
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mohamedmagdynady/repoind
+   ebafcc5..a13c1eb  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git branch ReadMe
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"branch readme"
+On branch master
+Your branch is up to date with 'mohamedmagdynady/master'.
+
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+rm 'README'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"rmdeleted"
+[ReadMe b1dc461] rmdeleted
+ 1 file changed, 5 deletions(-)
+ delete mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git checkout ReadMe
+Already on 'ReadMe'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"change branch to readme"
+On branch ReadMe
+Untracked files:
+        README
+
+nothing added to commit but untracked files present
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git add README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+error: the following file has changes staged in the index:
+    README
+(use --cached to keep the file, or -f to force removal)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+error: the following file has changes staged in the index:
+    README
+(use --cached to keep the file, or -f to force removal)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"add readme to branch"
+[ReadMe aba94ea] add readme to branch
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"add readme to branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git branch
+* ReadMe
+  master
