@@ -1,0 +1,451 @@
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6)
+$ git init
+Initialized empty Git repository in C:/Users/lenovo/Desktop/New folder
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"one"
+On branch master
+
+Initial commit
+
+Untracked files:
+        1.txt
+        AllMyCommands.txt.txt
+        f1.txt
+        f3.txt
+
+nothing added to commit but untracked files present
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add 1.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add f1.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add f3.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommand.txt
+fatal: pathspec 'AllMyCommand.txt' did not match any files
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommands.txt
+fatal: pathspec 'AllMyCommands.txt' did not match any files
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"add file"
+[master (root-commit) 8b4c021] add file
+ 4 files changed, 731 insertions(+)
+ create mode 100644 1.txt
+ create mode 100644 AllMyCommands.txt.txt
+ create mode 100644 f1.txt
+ create mode 100644 f3.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote reping
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git remote add https://github.com/mohamedmagdynady/repoind
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetc
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git remote add mohamedmagdynady https://github.com/mohamedmagdynady/
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote reping
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push mohamedmagdynady
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream mohamedmagdynady master
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git remote add repoind https://github.com/mohamedmagdynady/repoind
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 8.37 KiB | 1.05 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/mohamedmagdynady/repoind
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit m"files pushed"
+error: pathspec 'mfiles pushed' did not match any file(s) known to git
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"files pushed"
+On branch master
+Your branch is up to date with 'mohamedmagdynady/master'.
+
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git rm f3.txt
+rm 'f3.txt'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"delete file"
+[master ebafcc5] delete file
+ 1 file changed, 55 deletions(-)
+ delete mode 100644 f3.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 220 bytes | 220.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mohamedmagdynady/repoind
+   8b4c021..ebafcc5  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add README.md
+fatal: pathspec 'README.md' did not match any files
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"read me added"
+[master a13c1eb] read me added
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/mohamedmagdynady/repoind
+   ebafcc5..a13c1eb  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git branch ReadMe
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"branch readme"
+On branch master
+Your branch is up to date with 'mohamedmagdynady/master'.
+
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git checkout ReadMe
+Switched to branch 'ReadMe'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+rm 'README'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"rmdeleted"
+[ReadMe b1dc461] rmdeleted
+ 1 file changed, 5 deletions(-)
+ delete mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git checkout ReadMe
+Already on 'ReadMe'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"change branch to readme"
+On branch ReadMe
+Untracked files:
+        README
+
+nothing added to commit but untracked files present
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git add README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+error: the following file has changes staged in the index:
+    README
+(use --cached to keep the file, or -f to force removal)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm README
+error: the following file has changes staged in the index:
+    README
+(use --cached to keep the file, or -f to force removal)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"add readme to branch"
+[ReadMe aba94ea] add readme to branch
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"add readme to branch"
+On branch ReadMe
+nothing to commit, working tree clean
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git branch
+* ReadMe
+  master
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ ^C
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ ^C
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ ^C
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git add .
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"allmycommandsadded"
+[ReadMe 376f078] allmycommandsadded
+ 1 file changed, 114 insertions(+), 612 deletions(-)
+ rewrite AllMyCommands.txt.txt (97%)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git rm AllMyCommands.txt.txt
+rm 'AllMyCommands.txt.txt'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"allmycommandsdeletetomodify"
+[ReadMe bef8786] allmycommandsdeletetomodify
+ 1 file changed, 114 deletions(-)
+ delete mode 100644 AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedma
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git add AllMyCommandsoriginal.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git commit -m"allmycommandsomodify"
+[ReadMe fb17d94] allmycommandsomodify
+ 1 file changed, 114 insertions(+)
+ create mode 100644 AllMyCommandsoriginal.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote reping
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git remote add repoind https://github.com/mohamedmagdynady/repoind
+fatal: remote repoind already exists.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push repoind
+fatal: The current branch ReadMe has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream repoind ReadMe
+
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git push repoind master
+Everything up-to-date
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git pull repoind master --allow-unrelated-histories
+From https://github.com/mohamedmagdynady/repoind
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (ReadMe)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'mohamedmagdynady/master'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommandsoriginal.txt
+fatal: pathspec 'AllMyCommandsoriginal.txt' did not match any files
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommandsoriginal.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"allmycommandsomodify"
+[master f97fb00] allmycommandsomodify
+ 1 file changed, 114 insertions(+)
+ create mode 100644 AllMyCommandsoriginal.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.07 KiB | 1.07 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mohamedmagdynady/repoind
+   a13c1eb..f97fb00  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git rm AllMyCommands.txt.txt
+rm 'AllMyCommands.txt.txt'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"allmycommandsomodify2"
+[master e21124e] allmycommandsomodify2
+ 1 file changed, 612 deletions(-)
+ delete mode 100644 AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git rm AllMyCommandsoriginal.txt.txt
+rm 'AllMyCommandsoriginal.txt.txt'
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"allmycommandsadded"
+[master 94a03fa] allmycommandsadded
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename AllMyCommandsoriginal.txt.txt => AllMyCommands.txt.txt (100%)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 429 bytes | 429.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/mohamedmagdynady/repoind
+   f97fb00..94a03fa  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git add AllMyCommands.txt.txt
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git commit -m"allmycommandsadded2"
+[master 79c5765] allmycommandsadded2
+ 1 file changed, 9 insertions(+)
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$ git push --set-upstream mohamedmagdynady master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 412 bytes | 412.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mohamedmagdynady/repoind
+   94a03fa..79c5765  master -> master
+Branch 'master' set up to track remote branch 'master' from 'mohamedmagdynady'.
+
+lenovo@DESKTOP-99G6TCP MINGW64 ~/Desktop/New folder (6) (master)
+$
